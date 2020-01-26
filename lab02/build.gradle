@@ -1,7 +1,9 @@
 plugins {
     id "application"
 }
+
 apply plugin: 'java'
+
 ext {
    javaMainClass = "lab02.SimpleTest"
 } 
@@ -10,7 +12,8 @@ mainClassName = javaMainClass
 
 repositories {
     mavenCentral()
- }
+}
+
 dependencies {
    compile group: 'commons-validator', name: 'commons-validator', version: '1.4.1'
  }

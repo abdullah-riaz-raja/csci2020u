@@ -1,0 +1,7 @@
+-classpath '/mnt/c/users/Abdullah Riaz/desktop/codes/csci2020u/lab02/build/classes/java/main:/mnt/c/users/Abdullah Riaz/desktop/codes/csci2020u/lab02/build/resources/main:/home/ramibugeyes/.gradle/caches/modules-2/files-2.1/commons-validator/commons-validator/1.4.1/2231238e391057a53f92bde5bbc588622c1956c3/commons-validator-1.4.1.jar:/home/ramibugeyes/.gradle/caches/modules-2/files-2.1/commons-beanutils/commons-beanutils/1.8.3/686ef3410bcf4ab8ce7fd0b899e832aaba5facf7/commons-beanutils-1.8.3.jar:/home/ramibugeyes/.gradle/caches/modules-2/files-2.1/commons-digester/commons-digester/1.8.1/3dec9b9c7ea9342d4dbe8c38560080d85b44a015/commons-digester-1.8.1.jar:/home/ramibugeyes/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar:/home/ramibugeyes/.gradle/caches/modules-2/files-2.1/commons-collections/commons-collections/3.2.1/761ea405b9b37ced573d2df0d1e3a4e0f9edc668/commons-collections-3.2.1.jar'
+-d '/mnt/c/users/Abdullah Riaz/desktop/codes/csci2020u/lab02/build/docs/javadoc'
+-doctitle 'lab02 API'
+-notimestamp 
+-quiet 
+-windowtitle 'lab02 API'
+'/mnt/c/users/Abdullah Riaz/desktop/codes/csci2020u/lab02/src/main/java/csci2020u/lab02/SimpleTest.java'
