@@ -79,10 +79,10 @@ set CMD_LINE_ARGS=%*
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\lab02.jar;%APP_HOME%\lib\commons-validator-1.4.1.jar;%APP_HOME%\lib\commons-beanutils-1.8.3.jar;%APP_HOME%\lib\commons-digester-1.8.1.jar;%APP_HOME%\lib\commons-logging-1.2.jar;%APP_HOME%\lib\commons-collections-3.2.1.jar
+set CLASSPATH=%APP_HOME%\lib\lab02.jar;%APP_HOME%\lib\commons-validator-1.4.1.jar;%APP_HOME%\lib\commons-csv-1.7.jar;%APP_HOME%\lib\commons-beanutils-1.8.3.jar;%APP_HOME%\lib\commons-digester-1.8.1.jar;%APP_HOME%\lib\commons-logging-1.2.jar;%APP_HOME%\lib\commons-collections-3.2.1.jar
 
 @rem Execute lab02
-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %LAB02_OPTS%  -classpath "%CLASSPATH%" lab02.SimpleTest %CMD_LINE_ARGS%
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %LAB02_OPTS%  -classpath "%CLASSPATH%" lab02.CSVDemo %CMD_LINE_ARGS%
 
 :end
 @rem End local scope for the variables with windows NT shell

@@ -80,7 +80,7 @@ case "`uname`" in
     ;;
 esac
 
-CLASSPATH=$APP_HOME/lib/lab02.jar:$APP_HOME/lib/commons-validator-1.4.1.jar:$APP_HOME/lib/commons-beanutils-1.8.3.jar:$APP_HOME/lib/commons-digester-1.8.1.jar:$APP_HOME/lib/commons-logging-1.2.jar:$APP_HOME/lib/commons-collections-3.2.1.jar
+CLASSPATH=$APP_HOME/lib/lab02.jar:$APP_HOME/lib/commons-validator-1.4.1.jar:$APP_HOME/lib/commons-csv-1.7.jar:$APP_HOME/lib/commons-beanutils-1.8.3.jar:$APP_HOME/lib/commons-digester-1.8.1.jar:$APP_HOME/lib/commons-logging-1.2.jar:$APP_HOME/lib/commons-collections-3.2.1.jar
 
 # Determine the Java command to use to start the JVM.
 if [ -n "$JAVA_HOME" ] ; then
@@ -178,6 +178,6 @@ save () {
 APP_ARGS=`save "$@"`
 
 # Collect all arguments for the java command, following the shell quoting and substitution rules
-eval set -- $DEFAULT_JVM_OPTS $JAVA_OPTS $LAB02_OPTS -classpath "\"$CLASSPATH\"" lab02.SimpleTest "$APP_ARGS"
+eval set -- $DEFAULT_JVM_OPTS $JAVA_OPTS $LAB02_OPTS -classpath "\"$CLASSPATH\"" lab02.CSVDemo "$APP_ARGS"
 
 exec "$JAVACMD" "$@"
