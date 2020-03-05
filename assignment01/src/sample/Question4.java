@@ -16,23 +16,27 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class Question2  extends Application {
+public class Question4 extends Application {
 
+    //global variables defining height and length of the canvas
     int height = 500;
     int length = 800;
 
+    //returns an array with the frequency of each letter regardless of upper/lower case
     int[] getFrequency(Scanner text) {
         int[] freq = new int[26];
-        while (text.hasNext()){
-            String line = text.nextLine();
-            //System.out.println(line);
 
+        //checks if end of file has been reached
+        while (text.hasNext()) {
+            String line = text.nextLine();                      //stores the selected line as String
             int num = 0;
+
+            //updates frequency of each character
             for (int i = 0; i < line.length(); i++) {
                 num = (int) (line.charAt(i));
-                if ((num > 64) && (num < 91)) {
-                    freq[line.charAt(i) - 'A']++;
-                } else if ((num > 96) && (num < 123)) {
+                if ((num > 64) && (num < 91)) {                 //makes sure only A-Z are accounted for
+                    freq[line.charAt(i) - 'A']++;               //and all the other symbols are ignored
+                } else if ((num > 96) && (num < 123)) {         //makes sure only a-z are accounted for
                     freq[line.charAt(i) - 'a']++;
                 }
             }
@@ -40,15 +44,20 @@ public class Question2  extends Application {
         return freq;
     }
 
+    //returns a canvas to display
     Canvas createHistogram(int[] freq) {
+        //setting up canvas
         Canvas canvas = new Canvas(length, height);
         GraphicsContext gc = canvas.getGraphicsContext2D();
         gc.setLineWidth(1.5);
+
+        //draws 26 bars representing frequency of each letter
         for (int i = 0; i < 26; i++) {
             int barH = freq[i]*10;
             gc.strokeRect(10+i*30, height-barH-50, 25, barH);
         }
 
+        //draws the x-axis (letter labels)
         for (int i = 0; i < 26; i++) {
             char letter = (char) ('A' + i);
             gc.fillText(String.valueOf(letter), 20+i*30, height-30);
@@ -56,32 +65,31 @@ public class Question2  extends Application {
         return canvas;
     }
 
-//    void display() {
-//
-//    }
-
     @Override
     public void start(Stage primaryStage) throws FileNotFoundException {
 
         VBox vbox = new VBox();
         HBox hbox = new HBox();
 
-        //Displaying Histogram
+        //initial empty canvas
         Canvas empty = new Canvas(length, height);
 
-        //Controls
+        //user controls
         Label fileName = new Label("   Filename");
         fileName.setPrefWidth(70);
+
         TextField pathField = new TextField();
         pathField.setPrefWidth(700);
+
         Button view = new Button("View");
         view.setOnAction( e -> {
+            //takes user inputted path to the text file
             String path = (pathField.getText());
 
-            //Selecting a file
+            //file is loaded
             File srcFile = new File(path);
 
-            //Checks if the selected file exists
+            //Checks if the file exists; if not, exit
             if(!srcFile.exists()){
                 System.out.println("Selected file does not exist");
                 System.exit(2);
@@ -95,19 +103,16 @@ public class Question2  extends Application {
                 ex.printStackTrace();
             }
 
+            //intialize an array with frequency of each letter
             int freq[] = getFrequency(input);
-            //input.close();
+            input.close();
 
-            System.out.println(path);
+            //previous canvas is replaced with the new canvas containing the updated histogram
             Canvas histogram = createHistogram(freq);
             hbox.getChildren().clear();
             vbox.getChildren().clear();
             hbox.getChildren().addAll(fileName, pathField, view);
             vbox.getChildren().addAll(histogram, hbox);
-//            Scene s = new Scene(vbox);
-//            primaryStage.setScene(s);
-//            primaryStage.setTitle("Question 4");
-//            primaryStage.show();
         });
 
         //Displaying everything to the user
