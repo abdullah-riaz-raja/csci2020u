@@ -7,6 +7,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -51,6 +54,13 @@
   <component name="FavoritesManager">
     <favorites_list name="JavaFxApplication" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaFXApplication" />
+      </list>
+    </option>
+  </component>
   <component name="FindManager">
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
@@ -60,7 +70,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectId" id="1XMUQoikueOFkctdx9p8A6eiomb" />
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1YJKnk64YAL7eaxIK39cxnuq22A" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
@@ -78,16 +91,23 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../midterm1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="recentsLimit" value="5" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.ScrollBarExample">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -113,24 +133,56 @@
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="sample.Main" />
-      <module name="lab04" />
-      <option name="VM_PARAMETERS" value="--module-path C:\Java\windows\javafx-sdk-13.0.2\lib --add-modules javafx.controls,javafx.fxml" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="sample.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
+    <configuration name="CheckBoxExample" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="CheckBoxExample" />
+      <module name="GUI6" />
+      <option name="VM_PARAMETERS" value="--module-path ${PATH_TO_FX} --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ComboBoxExample" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="ComboBoxExample" />
+      <module name="GUI6" />
+      <option name="VM_PARAMETERS" value="--module-path ${PATH_TO_FX} --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RadioButtonExample" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="RadioButtonExample" />
+      <module name="GUI6" />
+      <option name="VM_PARAMETERS" value="--module-path ${PATH_TO_FX} --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScrollBarExample" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="ScrollBarExample" />
+      <module name="GUI6" />
+      <option name="VM_PARAMETERS" value="--module-path ${PATH_TO_FX} --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SliderExample" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="SliderExample" />
+      <module name="GUI6" />
+      <option name="VM_PARAMETERS" value="--module-path ${PATH_TO_FX} --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="listview" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="listview" />
+      <module name="GUI6" />
+      <option name="VM_PARAMETERS" value="--module-path ${PATH_TO_FX} --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -166,6 +218,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.listview" />
+      <item itemvalue="Application.SliderExample" />
+      <item itemvalue="Application.ComboBoxExample" />
+      <item itemvalue="Application.ScrollBarExample" />
+      <item itemvalue="Application.CheckBoxExample" />
+      <item itemvalue="Application.RadioButtonExample" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -178,56 +238,57 @@
       <option name="presentableId" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
+      <workItem from="1582655427878" duration="2200000" />
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1302000" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="345" y="141" key="#Notifications" timestamp="1580855754199">
+    <state x="414" y="175" width="1092" height="704" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582657005960">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" width="1092" height="704" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582657005960" />
+    <state x="740" y="225" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1582656238582">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="225" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582656238582" />
+    <state x="689" y="311" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1582656995823">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="689" y="311" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582656995823" />
+    <state x="666" y="261" key="FileChooserDialogImpl" timestamp="1582655755774">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="666" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1582655755774" />
+    <state width="1461" height="256" key="GridCell.Tab.0.bottom" timestamp="1583269648237">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state x="345" y="141" key="#Notifications/0.0.1504.963@0.0.1504.963" timestamp="1580855754198" />
-    <state x="208" y="138" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580855470035">
+    <state width="1461" height="256" key="GridCell.Tab.0.bottom/0.0.1504.963@0.0.1504.963" timestamp="1583269648237" />
+    <state width="1877" height="261" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582657697401" />
+    <state width="1461" height="256" key="GridCell.Tab.0.center" timestamp="1583269648237">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state x="208" y="138" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1504.963@0.0.1504.963" timestamp="1580855470035" />
-    <state x="460" y="224" key="FileChooserDialogImpl" timestamp="1583358026422">
+    <state width="1461" height="256" key="GridCell.Tab.0.center/0.0.1504.963@0.0.1504.963" timestamp="1583269648237" />
+    <state width="1877" height="261" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582657697401" />
+    <state width="1461" height="256" key="GridCell.Tab.0.left" timestamp="1583269648237">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state x="460" y="224" key="FileChooserDialogImpl/0.0.1504.963@0.0.1504.963" timestamp="1583358026422" />
-    <state width="1461" height="128" key="GridCell.Tab.0.bottom" timestamp="1582663908022">
+    <state width="1461" height="256" key="GridCell.Tab.0.left/0.0.1504.963@0.0.1504.963" timestamp="1583269648237" />
+    <state width="1877" height="261" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582657697401" />
+    <state width="1461" height="256" key="GridCell.Tab.0.right" timestamp="1583269648237">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state width="1461" height="128" key="GridCell.Tab.0.bottom/0.0.1504.963@0.0.1504.963" timestamp="1582663908022" />
-    <state width="1461" height="128" key="GridCell.Tab.0.center" timestamp="1582663908020">
-      <screen x="0" y="0" width="1504" height="963" />
+    <state width="1461" height="256" key="GridCell.Tab.0.right/0.0.1504.963@0.0.1504.963" timestamp="1583269648237" />
+    <state width="1877" height="261" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582657697401" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1582655769835">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1461" height="128" key="GridCell.Tab.0.center/0.0.1504.963@0.0.1504.963" timestamp="1582663908020" />
-    <state width="1461" height="128" key="GridCell.Tab.0.left" timestamp="1582663908020">
-      <screen x="0" y="0" width="1504" height="963" />
-    </state>
-    <state width="1461" height="128" key="GridCell.Tab.0.left/0.0.1504.963@0.0.1504.963" timestamp="1582663908020" />
-    <state width="1461" height="128" key="GridCell.Tab.0.right" timestamp="1582663908022">
-      <screen x="0" y="0" width="1504" height="963" />
-    </state>
-    <state width="1461" height="128" key="GridCell.Tab.0.right/0.0.1504.963@0.0.1504.963" timestamp="1582663908022" />
-    <state x="233" y="57" key="SettingsEditor" timestamp="1580937980435">
-      <screen x="0" y="0" width="1504" height="963" />
-    </state>
-    <state x="233" y="57" key="SettingsEditor/0.0.1504.963@0.0.1504.963" timestamp="1580937980435" />
-    <state x="203" y="185" key="new project wizard" timestamp="1582751351212">
-      <screen x="0" y="0" width="1504" height="963" />
-    </state>
-    <state x="203" y="185" key="new project wizard/0.0.1504.963@0.0.1504.963" timestamp="1582751351212" />
-    <state x="415" y="206" key="search.everywhere.popup" timestamp="1580936783965">
-      <screen x="0" y="0" width="1504" height="963" />
-    </state>
-    <state x="415" y="206" key="search.everywhere.popup/0.0.1504.963@0.0.1504.963" timestamp="1580936783965" />
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1582655769835" />
   </component>
 </project>
