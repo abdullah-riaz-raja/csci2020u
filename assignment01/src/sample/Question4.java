@@ -1,3 +1,6 @@
+//Written by Michael Loo - 100702210
+//and Abdullah Riaz Raja - 100693348
+
 package sample;
 
 import javafx.application.Application;
@@ -7,11 +10,10 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -19,7 +21,7 @@ import java.util.Scanner;
 public class Question4 extends Application {
 
     //global variables defining height and length of the canvas
-    int height = 500;
+    int height = 400;
     int length = 800;
 
     //returns an array with the frequency of each letter regardless of upper/lower case
@@ -46,6 +48,15 @@ public class Question4 extends Application {
 
     //returns a canvas to display
     Canvas createHistogram(int[] freq) {
+
+        //finds max frequency for scaling purposes
+        int max = freq[0];
+        for (int i = 0; i < 26; i++) {
+            if (max < freq[i]) {
+                max = freq[i];
+            }
+        }
+
         //setting up canvas
         Canvas canvas = new Canvas(length, height);
         GraphicsContext gc = canvas.getGraphicsContext2D();
@@ -53,7 +64,7 @@ public class Question4 extends Application {
 
         //draws 26 bars representing frequency of each letter
         for (int i = 0; i < 26; i++) {
-            int barH = freq[i]*10;
+            int barH = (freq[i] * 300/ max);
             gc.strokeRect(10+i*30, height-barH-50, 25, barH);
         }
 
@@ -89,30 +100,25 @@ public class Question4 extends Application {
             //file is loaded
             File srcFile = new File(path);
 
-            //Checks if the file exists; if not, exit
-            if(!srcFile.exists()){
-                System.out.println("Selected file does not exist");
-                System.exit(2);
-            }
-
             //read file
             Scanner input = null;
             try {
                 input = new Scanner(srcFile);
+
+                //initialize an array with frequency of each letter
+                int freq[] = getFrequency(input);
+                input.close();
+
+                //previous canvas is replaced with the new canvas containing the updated histogram
+                Canvas histogram = createHistogram(freq);
+                hbox.getChildren().clear();
+                vbox.getChildren().clear();
+                hbox.getChildren().addAll(fileName, pathField, view);
+                vbox.getChildren().addAll(histogram, hbox);
             } catch (FileNotFoundException ex) {
-                ex.printStackTrace();
+                System.out.println("Selected file does not exist");
             }
 
-            //intialize an array with frequency of each letter
-            int freq[] = getFrequency(input);
-            input.close();
-
-            //previous canvas is replaced with the new canvas containing the updated histogram
-            Canvas histogram = createHistogram(freq);
-            hbox.getChildren().clear();
-            vbox.getChildren().clear();
-            hbox.getChildren().addAll(fileName, pathField, view);
-            vbox.getChildren().addAll(histogram, hbox);
         });
 
         //Displaying everything to the user

@@ -1,3 +1,6 @@
+//Written by Michael Loo - 100702210
+//and Abdullah Riaz Raja - 100693348
+
 package sample;
 
 import javafx.application.Application;
@@ -11,7 +14,9 @@ import javafx.scene.shape.Line;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class Q3 extends Application {
+import java.util.ArrayList;
+
+public class Question3 extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -25,9 +30,9 @@ public class Q3 extends Application {
 
         //initializing circles
         Circle mainCircle = new Circle(250, 250, 150);
-        Circle miniCircle1 = new Circle(100, 250, 9);
-        Circle miniCircle2 = new Circle(250, 100, 9);
-        Circle miniCircle3 = new Circle(400, 250, 9);
+        Circle miniCircle1 = new Circle(100, 250, 8);
+        Circle miniCircle2 = new Circle(250, 100, 8);
+        Circle miniCircle3 = new Circle(400, 250, 8);
 
         mainCircle.setStroke(Color.BLACK);
         mainCircle.setFill(Color.TRANSPARENT);
@@ -58,19 +63,6 @@ public class Q3 extends Application {
         line3.endXProperty().bind(miniCircle1.centerXProperty());
         line3.endYProperty().bind(miniCircle1.centerYProperty());
 
-        //finding the default angle via distance
-//        double d3 = calculateDistance(miniCircle1.getCenterX(),miniCircle1.getCenterY(),miniCircle2.getCenterX(),miniCircle2.getCenterY());
-//        double d1 = calculateDistance(miniCircle2.getCenterX(),miniCircle2.getCenterY(),miniCircle3.getCenterX(),miniCircle3.getCenterY());
-//        double d2 = calculateDistance(miniCircle3.getCenterX(),miniCircle3.getCenterY(),miniCircle1.getCenterX(),miniCircle1.getCenterY());
-//
-//        int A1 = (int) calculateAngle(d1,d2,d3);
-//        int A2 = (int) calculateAngle(d2,d3,d1);
-//        int A3 = (int) calculateAngle(d3,d2,d1);
-//
-//        String sA1 = String.valueOf(A1);
-//        String sA2 = String.valueOf(A2);
-//        String sA3 = String.valueOf(A3);
-
 
         //initializing the angle labels on each miniCircle
         Text text1 = new Text("45"); //for miniCircle1
@@ -88,6 +80,8 @@ public class Q3 extends Application {
 
         //mouse input for miniCircle1
         miniCircle1.setOnMouseDragged((MouseEvent me) -> {
+
+            //finds the center of the mainCircle and sets it so that miniCircle1 can only go around mainCircle's radius
             Point2D mainCenter = new Point2D(mainCircle.getCenterX(), mainCircle.getCenterY());
             Point2D mouse = new Point2D(me.getX(), me.getSceneY());
             Point2D centerToMouse = mouse.subtract(mainCenter);
@@ -95,16 +89,28 @@ public class Q3 extends Application {
             Point2D newPoint = centerToNewPoint.add(mainCenter);
             miniCircle1.setCenterX(newPoint.getX());
             miniCircle1.setCenterY(newPoint.getY());
+
+            //calculates dist and angle to set the angles of the miniCircles
             double d3 = calculateDistance(miniCircle1.getCenterX(),miniCircle1.getCenterY(),miniCircle2.getCenterX(),miniCircle2.getCenterY());
             double d1 = calculateDistance(miniCircle2.getCenterX(),miniCircle2.getCenterY(),miniCircle3.getCenterX(),miniCircle3.getCenterY());
             double d2 = calculateDistance(miniCircle3.getCenterX(),miniCircle3.getCenterY(),miniCircle1.getCenterX(),miniCircle1.getCenterY());
-            int A1 = (int) calculateAngle(d1,d2,d3);
+            int A1 = (int) Math.round(calculateAngle(d1,d2,d3));
+            int A2 = (int) Math.round(calculateAngle(d2,d3,d1));
+            int A3 = (int) Math.round(calculateAngle(d3,d2,d1));
             String sA1 = String.valueOf(A1);
+            String sA2 = String.valueOf(A2);
+            String sA3 = String.valueOf(A3);
+
+            //updates the angles to the current angle positions
             text1.setText(sA1);
+            text2.setText(sA2);
+            text3.setText(sA3);
         });
 
         //mouse input for miniCircle2
         miniCircle2.setOnMouseDragged((MouseEvent me) -> {
+
+            //finds the center of the mainCircle and sets it so that miniCircle2 can only go around mainCircle's radius
             Point2D mainCenter = new Point2D(mainCircle.getCenterX(), mainCircle.getCenterY());
             Point2D mouse = new Point2D(me.getX(), me.getSceneY());
             Point2D centerToMouse = mouse.subtract(mainCenter);
@@ -112,16 +118,28 @@ public class Q3 extends Application {
             Point2D newPoint = centerToNewPoint.add(mainCenter);
             miniCircle2.setCenterX(newPoint.getX());
             miniCircle2.setCenterY(newPoint.getY());
+
+            //calculates dist and angle to set the angles of the miniCircles
             double d3 = calculateDistance(miniCircle1.getCenterX(),miniCircle1.getCenterY(),miniCircle2.getCenterX(),miniCircle2.getCenterY());
             double d1 = calculateDistance(miniCircle2.getCenterX(),miniCircle2.getCenterY(),miniCircle3.getCenterX(),miniCircle3.getCenterY());
             double d2 = calculateDistance(miniCircle3.getCenterX(),miniCircle3.getCenterY(),miniCircle1.getCenterX(),miniCircle1.getCenterY());
-            int A2 = (int) calculateAngle(d2,d3,d1);
+            int A1 = (int) Math.round(calculateAngle(d1,d2,d3));
+            int A2 = (int) Math.round(calculateAngle(d2,d3,d1));
+            int A3 = (int) Math.round(calculateAngle(d3,d2,d1));
+            String sA1 = String.valueOf(A1);
             String sA2 = String.valueOf(A2);
-            text1.setText(sA2);
+            String sA3 = String.valueOf(A3);
+
+            //updates the angles to the current angle positions
+            text1.setText(sA1);
+            text2.setText(sA2);
+            text3.setText(sA3);
         });
 
         //mouse input for miniCircle3
         miniCircle3.setOnMouseDragged((MouseEvent me) -> {
+
+            //finds the center of the mainCircle and sets it so that miniCircle3 can only go around mainCircle's radius
             Point2D mainCenter = new Point2D(mainCircle.getCenterX(), mainCircle.getCenterY());
             Point2D mouse = new Point2D(me.getX(), me.getSceneY());
             Point2D centerToMouse = mouse.subtract(mainCenter);
@@ -129,16 +147,31 @@ public class Q3 extends Application {
             Point2D newPoint = centerToNewPoint.add(mainCenter);
             miniCircle3.setCenterX(newPoint.getX());
             miniCircle3.setCenterY(newPoint.getY());
+
+            //calculates dist and angle to set the angles of the miniCircles
             double d3 = calculateDistance(miniCircle1.getCenterX(),miniCircle1.getCenterY(),miniCircle2.getCenterX(),miniCircle2.getCenterY());
             double d1 = calculateDistance(miniCircle2.getCenterX(),miniCircle2.getCenterY(),miniCircle3.getCenterX(),miniCircle3.getCenterY());
             double d2 = calculateDistance(miniCircle3.getCenterX(),miniCircle3.getCenterY(),miniCircle1.getCenterX(),miniCircle1.getCenterY());
-            int A3 = (int) calculateAngle(d3,d2,d1);
+            int A1 = (int) Math.round(calculateAngle(d1,d2,d3));
+            int A2 = (int) Math.round(calculateAngle(d2,d3,d1));
+            int A3 = (int) Math.round(calculateAngle(d3,d2,d1));
+            String sA1 = String.valueOf(A1);
+            String sA2 = String.valueOf(A2);
             String sA3 = String.valueOf(A3);
-            text1.setText(sA3);
+
+            //updates the angles to the current angle positions
+            text1.setText(sA1);
+            text2.setText(sA2);
+            text3.setText(sA3);
         });
 
+        //off sets text so it doesn't overlap with the miniCircles
+        text1.setTranslateX(15);
+        text2.setTranslateX(15);
+        text3.setTranslateX(15);
+
         //adding contents to the group
-        group.getChildren().addAll(mainCircle,miniCircle1,miniCircle2,miniCircle3,line1,line2,line3,text1,text2,text3);
+        group.getChildren().addAll(line1,line2,line3,text1,text2,text3, mainCircle,miniCircle1,miniCircle2, miniCircle3);
 
         //putting the group in the scene
         Scene scene = new Scene(group);
@@ -160,14 +193,12 @@ public class Q3 extends Application {
         double p1 = (a*a - b*b - c*c);
         double p2 = (-2*b*c);
 
-        double Ang = a*(Math.cos(p1/p2));
+        double Ang = Math.toDegrees((Math.acos(p1/p2)));
         return Ang;
     }
 
-    //private
-
-
-
+    public static int getRandomNumber() {
+        int result = (int) Math.random()*100;
+        return result;
+    }
 }
-
-

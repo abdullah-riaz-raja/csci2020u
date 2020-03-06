@@ -93,7 +93,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
   </component>
-  <component name="RunManager" selected="Application.Question4">
+  <component name="RunManager" selected="Application.Question3">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -119,8 +119,8 @@
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="sample.Main" />
+    <configuration name="Question1" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="sample.Question1" />
       <module name="assignment01" />
       <option name="VM_PARAMETERS" value="--module-path C:\Java\windows\javafx-sdk-13.0.2\lib --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
@@ -135,8 +135,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Q3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sample.Q3" />
+    <configuration name="Question2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sample.Question2" />
+      <module name="assignment01" />
+      <option name="VM_PARAMETERS" value="--module-path C:\Java\windows\javafx-sdk-13.0.2\lib --add-modules javafx.controls,javafx.fxml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sample.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Question3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sample.Question3" />
       <module name="assignment01" />
       <option name="VM_PARAMETERS" value="--module-path C:\Java\windows\javafx-sdk-13.0.2\lib --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
@@ -201,14 +215,16 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Question1" />
       <item itemvalue="Application.Question4" />
-      <item itemvalue="Application.Q3" />
+      <item itemvalue="Application.Question2" />
+      <item itemvalue="Application.Question3" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Question3" />
         <item itemvalue="Application.Question4" />
-        <item itemvalue="Application.Q3" />
+        <item itemvalue="Application.Question2" />
       </list>
     </recent_temporary>
   </component>
@@ -234,30 +250,34 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="208" y="138" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583433684555">
+    <state x="208" y="138" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583453723558">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state x="208" y="138" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1504.963@0.0.1504.963" timestamp="1583433684555" />
+    <state x="208" y="138" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1504.963@0.0.1504.963" timestamp="1583453723558" />
+    <state x="503" y="319" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1583460545352">
+      <screen x="0" y="0" width="1504" height="963" />
+    </state>
+    <state x="503" y="319" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1504.963@0.0.1504.963" timestamp="1583460545352" />
     <state x="460" y="224" key="FileChooserDialogImpl" timestamp="1583357626905">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
     <state x="460" y="224" key="FileChooserDialogImpl/0.0.1504.963@0.0.1504.963" timestamp="1583357626905" />
-    <state width="1461" height="177" key="GridCell.Tab.0.bottom" timestamp="1583434680796">
+    <state width="1461" height="177" key="GridCell.Tab.0.bottom" timestamp="1583460439047">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state width="1461" height="177" key="GridCell.Tab.0.bottom/0.0.1504.963@0.0.1504.963" timestamp="1583434680796" />
-    <state width="1461" height="177" key="GridCell.Tab.0.center" timestamp="1583434680796">
+    <state width="1461" height="177" key="GridCell.Tab.0.bottom/0.0.1504.963@0.0.1504.963" timestamp="1583460439047" />
+    <state width="1461" height="177" key="GridCell.Tab.0.center" timestamp="1583460439046">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state width="1461" height="177" key="GridCell.Tab.0.center/0.0.1504.963@0.0.1504.963" timestamp="1583434680796" />
-    <state width="1461" height="177" key="GridCell.Tab.0.left" timestamp="1583434680796">
+    <state width="1461" height="177" key="GridCell.Tab.0.center/0.0.1504.963@0.0.1504.963" timestamp="1583460439046" />
+    <state width="1461" height="177" key="GridCell.Tab.0.left" timestamp="1583460439045">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state width="1461" height="177" key="GridCell.Tab.0.left/0.0.1504.963@0.0.1504.963" timestamp="1583434680796" />
-    <state width="1461" height="177" key="GridCell.Tab.0.right" timestamp="1583434680796">
+    <state width="1461" height="177" key="GridCell.Tab.0.left/0.0.1504.963@0.0.1504.963" timestamp="1583460439045" />
+    <state width="1461" height="177" key="GridCell.Tab.0.right" timestamp="1583460439047">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state width="1461" height="177" key="GridCell.Tab.0.right/0.0.1504.963@0.0.1504.963" timestamp="1583434680796" />
+    <state width="1461" height="177" key="GridCell.Tab.0.right/0.0.1504.963@0.0.1504.963" timestamp="1583460439047" />
     <state width="1461" height="317" key="GridCell.Tab.1.bottom" timestamp="1583386907288">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
@@ -278,5 +298,9 @@
       <screen x="0" y="0" width="1504" height="963" />
     </state>
     <state x="233" y="57" key="SettingsEditor/0.0.1504.963@0.0.1504.963" timestamp="1583294733870" />
+    <state x="415" y="206" width="672" height="678" key="search.everywhere.popup" timestamp="1583437894880">
+      <screen x="0" y="0" width="1504" height="963" />
+    </state>
+    <state x="415" y="206" width="672" height="678" key="search.everywhere.popup/0.0.1504.963@0.0.1504.963" timestamp="1583437894880" />
   </component>
 </project>

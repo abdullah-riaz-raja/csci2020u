@@ -1,6 +1,5 @@
-/*
-Written by Abdullah Riaz Raja - 100693348
- */
+//Written by Michael Loo - 100702210
+//and Abdullah Riaz Raja - 100693348
 
 package sample;
 
@@ -16,7 +15,7 @@ import javafx.stage.Stage;
 import java.io.FileInputStream;
 import java.util.ArrayList;
 
-public class Main extends Application {
+public class Question1 extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
